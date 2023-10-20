@@ -53,15 +53,18 @@ int main(int argc, char **argv) {
     printf("%f",result);
   }
    else if(choice == 6) {
-    //TODO: handle this case (log_a(b))
+    if (a > 0 && b > 0)
+    {
+      result = (log(a) / log(b));
+      printf("%f", result);
   } else {
-    printf("Please input a valid operator next time");
+    printf("its a negative value");
   }
 
   return 0;
 }
-int min(int x, int y)
-{
-  int z = (x < y) ? x : y;
+}
+int min(int x, int y){
+  int z = (x > y) ? x : y;
   return z;
 }
