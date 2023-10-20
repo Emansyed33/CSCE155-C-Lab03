@@ -41,7 +41,12 @@ int main(int argc, char **argv) {
     printf("%f",result);
   }
    else if(choice == 4) {
-    //TODO: handle this case (division)
+    if(b>0)
+    {
+      result=a/b;
+      printf("%f",result);
+    }
+
   } else if(choice == 5) {
 
     //TODO: handle this case (minimum)
