@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-
+int min(int x, int y);
 int main(int argc, char **argv) {
 
   double a, b, result;
@@ -49,12 +49,19 @@ int main(int argc, char **argv) {
 
   } else if(choice == 5) {
 
-    //TODO: handle this case (minimum)
-  } else if(choice == 6) {
+    result = min(a, b);
+    printf("%f",result);
+  }
+   else if(choice == 6) {
     //TODO: handle this case (log_a(b))
   } else {
     printf("Please input a valid operator next time");
   }
 
   return 0;
+}
+int min(int x, int y)
+{
+  int z = (x < y) ? x : y;
+  return z;
 }
